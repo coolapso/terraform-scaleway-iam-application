@@ -25,9 +25,10 @@ integration test.
 
 Use `task release:check` to run all checks and preview the next release. Use
 `task release` only from a clean `main` checkout with a
-`SEMREL_PLUGIN_TOKEN` GitHub credential; it can write `CHANGELOG.md`, create
-and push a Git tag, and create a GitHub release. semrel derives versions from
-Conventional Commit messages.
+`SEMREL_PLUGIN_TOKEN` GitHub credential; it creates a Git tag and a GitHub
+release. Release notes live only in the GitHub release: keep
+`commit_changelog: false` so semrel never writes or commits `CHANGELOG.md`.
+semrel derives versions from Conventional Commit messages.
 
 ## OpenTofu conventions
 

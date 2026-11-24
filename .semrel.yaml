@@ -3,5 +3,10 @@ schemaVersion: 1
 tagPrefix: v
 branches:
   - name: main
+
+# Git tags and GitHub Releases are the release record. The pipeline must never
+# create commits, version files, or a generated changelog in the repository.
+commit_changelog: false
+
 plugins:
   - uses: "@semrel/provider-github"

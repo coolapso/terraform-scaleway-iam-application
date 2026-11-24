@@ -165,5 +165,6 @@ installed locally. Install the version in `.opentofu-version`. `task ci` does
 not create cloud resources: native OpenTofu tests use a mocked provider and
 `command = plan`.
 `task release:check` previews the release, while `task release` creates the
-tag, changelog commit, and GitHub release. Set `SEMREL_PLUGIN_TOKEN` to a
-GitHub token with repository write access before a real local release.
+tag and GitHub release; it never commits a changelog. Set
+`SEMREL_PLUGIN_TOKEN` to a GitHub token with repository write access before a
+real local release.
