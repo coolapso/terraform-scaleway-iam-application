@@ -26,7 +26,9 @@ jobs:
           tofu_version_file: .opentofu-version
           tofu_wrapper: false
 
-      - uses: arduino/setup-task@v2
+      - uses: go-task/setup-task@v2
+        with:
+          version: 3.54.0
 
       - name: Install semrel
         run: |
@@ -58,7 +60,9 @@ jobs:
           tofu_version_file: .opentofu-version
           tofu_wrapper: false
 
-      - uses: arduino/setup-task@v2
+      - uses: go-task/setup-task@v2
+        with:
+          version: 3.54.0
 
       - name: Install semrel
         run: |
