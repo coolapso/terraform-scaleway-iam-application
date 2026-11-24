@@ -68,15 +68,15 @@ tasks:
   release:plugins:
     desc: Restore the semrel release plugins pinned in .semrel.lock
     cmds:
-      - semrel plugin restore
+      - semrel plugin restore --env-file ""
 
   release:check:
     desc: Run CI checks and preview the next release without changing GitHub or git
     deps: [ci, release:plugins]
     cmds:
-      - semrel doctor
-      - semrel lint
-      - semrel release --dry-run
+      - semrel doctor --env-file ""
+      - semrel lint --env-file ""
+      - semrel release --dry-run --env-file ""
 
   release:prepare:
     internal: true
@@ -88,4 +88,4 @@ tasks:
     desc: Create and publish a release from main; requires GitHub credentials
     deps: [release:check, release:prepare]
     cmds:
-      - semrel release
+      - semrel release --env-file ""
